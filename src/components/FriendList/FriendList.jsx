@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import css from "./FriendList.module.css";
 
-const FriendList = ({ friends }) => {
+export const FriendList = ({ friends }) => {
   return (
     <ul className={css.friendsList}>
       {friends.map(friend => (
@@ -26,4 +26,4 @@ FriendList.propTypes = {
   ),
 };
 
-export { FriendList };
+

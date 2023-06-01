@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
 import css from "./Statistics.module.css";
+import { getRandomHexColor } from "../../utils/getRandomHexColor.js";
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
-const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
       {title.length > 0 && <h2 className='title'>{title}</h2>}
@@ -37,5 +34,3 @@ Statistics.propTypes = {
     })
   ),
 };
-
-export { Statistics };
